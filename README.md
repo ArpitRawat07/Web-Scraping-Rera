@@ -7,7 +7,7 @@ The script navigates through multiple pages of search results, solves captchas u
 This project is especially useful for real estate analysts, researchers, and data-driven businesses who need structured RERA data at scale.
 
 ```
-Note: I've done this for the whole web site, but it takes a lot of time fetching the website, processing the captcha and formatting the csv. So I continued with a specific construction group(raheja).
+Note- Although the scraper was initially developed to work across the entire website, the process of fetching data, solving captchas, and formatting CSV output proved to be time-intensive. Therefore, the current implementation focuses specifically on projects from the Raheja construction group.
 ```
 ---
 
