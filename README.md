@@ -50,7 +50,7 @@ Only the web_scraping_rera.ipynb file is needed to run the project.
 
 ### Problem 1: Captcha on the RERA Website
 
-`Solution:`
+**Solution:**
 ```
 Inspect the web page using developer tools to locate the captcha within `<div>` tags.
 Captcha is rendered as a <canvas> element.
@@ -59,11 +59,11 @@ Extract the canvas image and apply OCR to read it.
 
 ### Problem 2: OCR Accuracy Issues
   
-`Issue:`
+**Issue:**
 ```
 OCR struggles to distinguish between characters like 1 and I, or 0 and O.
 ```
-`Solution:`
+**Solution:**
 ```
 Since the likelihood of both similar-looking characters appearing together is low, run multiple attempts (3–10) and retry until OCR produces a valid captcha result.
 Fewer attempts reduce time but also reduce the number of successful fetches.
@@ -71,11 +71,11 @@ Fewer attempts reduce time but also reduce the number of successful fetches.
 
 ### Problem 3: Website Blocking Bot Behavior
 
-`Issue:`
+**Issue:**
 ```
 Even with correct captcha input, the website may reject automated submissions due to non-human-like interaction speed.
 ```
-`Solution:`
+**Solution:**
 ```
 Simulate human-like behavior by introducing delays between keystrokes while entering captcha text (e.g., 100ms per character).
 Use random delays to further reduce detection likelihood.
@@ -83,11 +83,11 @@ Use random delays to further reduce detection likelihood.
 
 ### Problem 4: Large Volume of Records
 
-`Issue:`
+**Issue:**
 ```
 The pipeline is long and prone to failure, and any error can reset the entire process.
 ```
-`Solution:`
+**Solution:**
 ```
 Maintain a progress tracker (raheja_progress.txt) to record the last successfully scraped index and resume from there on subsequent runs.
 ```
